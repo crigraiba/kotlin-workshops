@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Oompa Loompa
+  jpa:
+    hibernate:
+      ddl-auto: update

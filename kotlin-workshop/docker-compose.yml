@@ -6,6 +6,6 @@ services:
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=oompaloompa
+      - POSTGRES_DB=employee
     ports:
       - 5432:5432

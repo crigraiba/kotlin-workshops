@@ -1,9 +1,9 @@
 package com.learning.extension
 
-import com.learning.domain.OompaLoompaDatabaseEntity
-import com.learning.domain.OompaLoompa
+import com.learning.domain.Employee
+import com.learning.domain.entity.EmployeeDatabaseEntity
 
-fun OompaLoompa.toOompaLoompaDbEntity(): OompaLoompaDatabaseEntity = OompaLoompaDatabaseEntity(
+fun Employee.toEmployeeDatabaseEntity(): EmployeeDatabaseEntity = EmployeeDatabaseEntity(
     name = this.name,
     age = this.age,
     job = this.job,
@@ -11,7 +11,7 @@ fun OompaLoompa.toOompaLoompaDbEntity(): OompaLoompaDatabaseEntity = OompaLoompa
     weight = this.weight
 )
 
-fun OompaLoompaDatabaseEntity.toOompaLoompa(): OompaLoompa = OompaLoompa(
+fun EmployeeDatabaseEntity.toEmployee(): Employee = Employee(
     id = this.id,
     name = this.name,
     age = this.age,

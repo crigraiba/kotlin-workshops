@@ -8,7 +8,7 @@ plugins {
 	kotlin("plugin.jpa") version "1.9.23"
 }
 
-group = "com.wefox.learning.oompaloompa"
+group = "com.wefox.learning.kotlin"
 version = "0.0.1-SNAPSHOT"
 
 java {

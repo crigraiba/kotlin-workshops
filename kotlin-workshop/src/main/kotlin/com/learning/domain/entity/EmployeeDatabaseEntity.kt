@@ -1,11 +1,11 @@
-package com.learning.domain
+package com.learning.domain.entity
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.Id
 
 @Entity
-data class OompaLoompaDatabaseEntity(
+data class EmployeeDatabaseEntity(
     @Id
     @GeneratedValue
     val id: Int = 0,

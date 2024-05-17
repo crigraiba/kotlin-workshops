@@ -5,7 +5,7 @@ import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Positive
 
-data class OompaLoompa(
+data class Employee(
     val id: Int? = null,
     @field:NotBlank
     val name: String,

@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface EmployeeRepository : JpaRepository<EmployeeDatabaseEntity, Int> {
 
-    fun findFirstByName(name: String): EmployeeDatabaseEntity?
+    fun existsByName(name: String): Boolean
 }

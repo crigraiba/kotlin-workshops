@@ -11,14 +11,13 @@ class EmployeeService(
     private val employeeRepository: EmployeeRepository
 ) {
 
-    fun save(requestBody: Employee) =
-        findFirstByName(requestBody.name)?.let {
+    fun save(requestBody: Employee) {
+        if (employeeRepository.existsByName(requestBody.name)) {
             throw RuntimeException("Employee already exists")
-        } ?: employeeRepository.save(requestBody.toEmployeeDatabaseEntity())
+        }
+        employeeRepository.save(requestBody.toEmployeeDatabaseEntity())
+    }
 
     fun findAll(): MutableList<Employee> =
         employeeRepository.findAll().stream().map { it.toEmployee() }.toList()
-
-    fun findFirstByName(name: String): Employee? =
-        employeeRepository.findFirstByName(name)?.toEmployee()
 }

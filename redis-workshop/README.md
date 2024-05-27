@@ -1,4 +1,4 @@
-# Kotlin Workshop
+# Redis Workshop
 
 ```mermaid
 ---
@@ -16,7 +16,7 @@ flowchart LR
             repository(["Repository"])
         end
         subgraph Domain Layer
-            domain[("`PostgreSQL
+            domain[("`Redis
             Database`")]
         end
     end
@@ -27,4 +27,18 @@ flowchart LR
 
 ```shell
 docker-compose up -d
+```
+
+```shell
+docker exec -it redis-workshop-database-1 redis-cli
+```
+
+### Redis
+
+```redis
+MONITOR
+```
+
+```redis
+QUIT
 ```

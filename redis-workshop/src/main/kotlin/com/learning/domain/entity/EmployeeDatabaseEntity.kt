@@ -8,8 +8,5 @@ data class EmployeeDatabaseEntity(
     @Id
     val id: Int = 0,
     val name: String,
-    val age: Int,
-    val job: String,
-    val height: Double,
-    val weight: Double
+    val age: Int
 )

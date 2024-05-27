@@ -20,8 +20,6 @@ flowchart LR
             Database`")]
         end
     end
-    postman["Postman"] <-->|save| controller
-    postman["Postman"] <-->|findAll| controller
     controller <--> service <--> repository <--> domain
 ```
 
@@ -32,8 +30,6 @@ docker-compose up -d
 ```shell
 docker exec -it redis-workshop-database-1 redis-cli
 ```
-
-### Redis
 
 ```redis
 MONITOR

@@ -5,17 +5,11 @@ import com.learning.domain.entity.EmployeeDatabaseEntity
 
 fun Employee.toEmployeeDatabaseEntity(): EmployeeDatabaseEntity = EmployeeDatabaseEntity(
     name = this.name,
-    age = this.age,
-    job = this.job,
-    height = this.height,
-    weight = this.weight
+    age = this.age
 )
 
 fun EmployeeDatabaseEntity.toEmployee(): Employee = Employee(
     id = this.id,
     name = this.name,
-    age = this.age,
-    job = this.job,
-    height = this.height,
-    weight = this.weight
+    age = this.age
 )

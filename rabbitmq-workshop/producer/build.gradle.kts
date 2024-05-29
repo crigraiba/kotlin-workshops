@@ -7,28 +7,13 @@ plugins {
   kotlin("plugin.spring") version "1.9.23"
 }
 
-group = "com.wefox.learning.kotlin"
-version = "0.0.1-SNAPSHOT"
-
-java {
-  sourceCompatibility = JavaVersion.VERSION_17
-}
-
-repositories {
-  mavenCentral()
-}
-
 dependencies {
-  implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
+  implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
   implementation("org.springframework.boot:spring-boot-starter-web")
-  implementation("org.springframework.boot:spring-boot-starter-actuator")
-  implementation("org.springframework.boot:spring-boot-starter-validation")
 
-  implementation("org.springframework.boot:spring-boot-starter-data-redis")
-
-  developmentOnly("org.springframework.boot:spring-boot-docker-compose")
+  implementation("org.springframework.boot:spring-boot-starter-amqp")
 
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

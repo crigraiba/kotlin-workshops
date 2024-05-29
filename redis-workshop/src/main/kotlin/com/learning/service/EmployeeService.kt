@@ -11,9 +11,9 @@ class EmployeeService(
     private val employeeRepository: EmployeeRepository
 ) {
 
-    fun save(requestBody: Employee) =
-        employeeRepository.save(requestBody.toEmployeeDatabaseEntity())
+  fun save(requestBody: Employee) =
+      employeeRepository.save(requestBody.toEmployeeDatabaseEntity())
 
-    fun findById(id: Int): Employee =
-        employeeRepository.findById(id).orElseThrow().toEmployee()
+  fun findById(id: Int): Employee =
+      employeeRepository.findById(id).orElseThrow().toEmployee()
 }

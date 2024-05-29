@@ -9,5 +9,5 @@ import org.springframework.data.redis.repository.configuration.EnableRedisReposi
 class EmployeeApplication
 
 fun main(args: Array<String>) {
-    runApplication<EmployeeApplication>(*args)
+  runApplication<EmployeeApplication>(*args)
 }

@@ -1,6 +1,6 @@
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
-}
-rootProject.name = "Kotlin Workshop"
-include("consumer")
-include("producer")
+rootProject.name = "RabbitMQ Workshop"
+
+include(
+    "consumer",
+    "producer"
+)

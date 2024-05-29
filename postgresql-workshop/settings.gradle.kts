@@ -1,1 +1,1 @@
-rootProject.name = "Kotlin Workshop"
+rootProject.name = "PostgreSQL Workshop"

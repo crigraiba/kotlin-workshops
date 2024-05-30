@@ -4,6 +4,7 @@ import com.learning.domain.Employee
 import com.learning.domain.entity.EmployeeDatabaseEntity
 
 fun Employee.toEmployeeDatabaseEntity(): EmployeeDatabaseEntity = EmployeeDatabaseEntity(
+    id = this.id,
     name = this.name,
     age = this.age
 )

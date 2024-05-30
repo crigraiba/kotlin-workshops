@@ -18,6 +18,8 @@ repositories {
   mavenCentral()
 }
 
+val openapiStarterWebmvcUiVersion = "2.5.0"
+
 dependencies {
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -27,6 +29,8 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-validation")
 
   implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:$openapiStarterWebmvcUiVersion")
 
   developmentOnly("org.springframework.boot:spring-boot-docker-compose")
 

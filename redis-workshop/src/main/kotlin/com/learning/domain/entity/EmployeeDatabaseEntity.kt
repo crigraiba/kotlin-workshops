@@ -6,7 +6,7 @@ import org.springframework.data.redis.core.RedisHash
 @RedisHash("Employee")
 data class EmployeeDatabaseEntity(
     @Id
-    val id: Int = 0,
+    val id: Int,
     val name: String,
     val age: Int
 )

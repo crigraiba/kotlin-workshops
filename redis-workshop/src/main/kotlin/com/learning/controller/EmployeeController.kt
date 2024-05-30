@@ -24,7 +24,7 @@ class EmployeeController(
 
   @GetMapping("/{id}")
   fun findById(@PathVariable id: Int): Employee {
-    log.info("EmployeeController#findById")
+    log.info("EmployeeController#findById, id = $id")
     return employeeService.findById(id)
   }
 }

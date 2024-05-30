@@ -1,10 +1,11 @@
 # Redis Workshop
 
-Redis is a key-value non-relational database. It can also be used for caching.
+Redis is an in-memory key-value non-relational database. It can also be used for caching.
 
 ## Dependencies
 
-- [Spring Data Redis](https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis)
+- Spring Data Redis (to use as a database)
+- Spring Cache Abstraction (to use as a cache)
 
 ## Architecture
 
@@ -29,6 +30,8 @@ flowchart
 ```
 
 ## Commands
+
+### As a database
 
 Run Spring Boot: EmployeeApplication in IntelliJ.
 
@@ -91,5 +94,34 @@ docker exec -it redis-workshop-database-1 redis-cli
 <tr>
 <td><pre>quit</pre></td>
 <td>Exit.</td>
+</tr>
+</table>
+
+### As a cache
+
+Configuration:
+
+<table>
+<tr>
+<td><pre>application.yml</pre></td>
+<td>
+<pre>
+spring:
+  cache:
+    type: redis
+</pre>
+</td>
+</tr>
+<tr>
+<td><pre>EmployeeApplication</pre></td>
+<td><pre>@EnableCaching</pre></td>
+</tr>
+<tr>
+<td><pre>EmployeeService#findById</pre></td>
+<td><pre>@Cacheable("Employee)</pre></td>
+</tr>
+<tr>
+<td><pre>Employee</pre></td>
+<td><pre> : Serializable</pre></td>
 </tr>
 </table>

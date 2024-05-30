@@ -4,6 +4,7 @@ import com.learning.domain.Employee
 import com.learning.extension.toEmployee
 import com.learning.extension.toEmployeeDatabaseEntity
 import com.learning.repository.EmployeeRepository
+import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Service
 
 @Service
@@ -14,6 +15,7 @@ class EmployeeService(
   fun save(requestBody: Employee) =
       employeeRepository.save(requestBody.toEmployeeDatabaseEntity())
 
+  @Cacheable("Employee")
   fun findById(id: Int): Employee =
       employeeRepository.findById(id).orElseThrow().toEmployee()
 }

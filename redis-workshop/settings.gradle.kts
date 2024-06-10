@@ -1,5 +1,6 @@
 rootProject.name = "Redis Workshop"
 
 include(
-    "repository"
+  "repository",
+  "template"
 )

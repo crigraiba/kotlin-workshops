@@ -29,6 +29,10 @@ flowchart
     controller <--> service <--> repository <--> domain
 ```
 
+([repository module](https://github.com/crigraiba/learning/tree/main/redis-workshop/repository))
+
+Or skip the Repository Layer with Redis Template ([template module](https://github.com/crigraiba/learning/tree/main/redis-workshop/template)).
+
 ## Commands
 
 ### As a database

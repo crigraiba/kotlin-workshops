@@ -47,16 +47,6 @@ docker container ps
 
 Notice `redis-workshop-database-1` is listed.
 
-Open Swagger UI in your browser:
-
-```text
-http://localhost:8080/swagger-ui/index.html
-```
-
-![Swagger UI](swagger-ui.png)
-
-:woman_scientist: **Try it out!**
-
 Open Redis CLI in your terminal:
 
 ```shell
@@ -116,6 +106,16 @@ my_field2 my_value2 ...</pre>
 <td>Exit.</td>
 </tr>
 </table>
+
+Open Swagger UI in your browser:
+
+```text
+http://localhost:8080/swagger-ui/index.html
+```
+
+![Swagger UI](swagger-ui.png)
+
+:woman_scientist: **Try it out!**
 
 ### As a cache
 

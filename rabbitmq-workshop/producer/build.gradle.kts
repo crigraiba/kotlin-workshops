@@ -7,6 +7,8 @@ plugins {
   kotlin("plugin.spring") version "1.9.23"
 }
 
+val openapiStarterWebmvcUiVersion = "2.5.0"
+
 dependencies {
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -14,6 +16,8 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
 
   implementation("org.springframework.boot:spring-boot-starter-amqp")
+
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:$openapiStarterWebmvcUiVersion")
 
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
